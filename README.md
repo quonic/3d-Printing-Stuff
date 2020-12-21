@@ -1,4 +1,4 @@
-# 3d-Priting-Stuff
+# 3d-Printing-Stuff
 Random assortment of 3d printing models made with OpenSCAD
 
 # TA-BA08 Clip
