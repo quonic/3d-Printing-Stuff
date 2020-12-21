@@ -12,20 +12,21 @@ Blade_Radius=Blade_Diameter/2;
 Number_of_Blades=12; // [6:64]
 
 module Shaft_Mount(center=true){
-    difference(){
-        cylinder(r=Shaft_Mount_Radius+Shaft_Mount_Wall_Thickness*2, h=Shaft_Mount_Top_Height+Shaft_Mount_Top_Thickness, center=true);
-        translate([0, 0, -Shaft_Mount_Top_Thickness]) {
-            cylinder(r=Shaft_Mount_Radius+Shaft_Mount_Wall_Thickness, h=Shaft_Mount_Top_Height, center=true);
-        }
-        translate([0, 0, 2]) {
-            cylinder(r=Shaft_Mount_Top_Radius, h=Shaft_Mount_Top_Height, center=center);
+    translate([0, 0, 16.5/2]) {
+        difference(){
+            cylinder(r=Shaft_Mount_Radius+Shaft_Mount_Wall_Thickness*2, h=Shaft_Mount_Top_Height+Shaft_Mount_Top_Thickness, center=true);
+            translate([0, 0, -Shaft_Mount_Top_Thickness]) {
+                cylinder(r=Shaft_Mount_Radius+Shaft_Mount_Wall_Thickness, h=Shaft_Mount_Top_Height, center=true);
+            }
+            translate([0, 0, 2]) {
+                cylinder(r=Shaft_Mount_Top_Radius, h=Shaft_Mount_Top_Height, center=center);
+            }
         }
     }
-
 }
 
 module Blade(n){
-    translate([0, 0, Blade_Height/2]) {
+    translate([0, 0, Blade_Height]) {
         for (i=[0:360/n:360]) {
             rotate([180, 0, i]) {
                 translate([Shaft_Mount_Radius+2, 0, 0]) {
