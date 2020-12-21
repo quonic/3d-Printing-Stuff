@@ -39,7 +39,7 @@ module Blade(n,twist=45){
                 // Move each blade away from the shaft by it's radius + wall thickness
                 translate([Shaft_Mount_Radius+2, 0, 0]) {
                     // Extrude the blade from 4 points.
-                    linear_extrude(height=Blade_Height, scale=[1,0.5], slices=20, twist=twist)
+                    linear_extrude(height=Blade_Height, scale=[1,0.5], slices=32, twist=twist)
                     polygon(points=[
                         [0,0],[0,1],
                         [Blade_Radius-1,4],[Blade_Radius-1,3]
@@ -49,8 +49,10 @@ module Blade(n,twist=45){
             }
         }
     }
- 
+}
+$fn=64;
+union(){
+    Shaft_Mount();
+    Blade(Number_of_Blades,Blade_Twist_Angle);
 }
 
-Shaft_Mount();
-Blade(Number_of_Blades,Blade_Twist_Angle);
