@@ -3,7 +3,7 @@ Random assortment of 3d printing models made with OpenSCAD
 
 # Button Caps
 
-![Example 12 bladed fan](/Button%20Caps/6x6x3%20Button%20Cap.stl)
+![Example 12 bladed fan](/Button%20Caps/6x6x3%20Button%20Cap.png)
 # TA-BA08 Clip
 A basic clip to hold a TaoTronics TA-BA08 bluetooth transmitter/reciever.
 
