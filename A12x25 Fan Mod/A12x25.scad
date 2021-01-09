@@ -1,3 +1,11 @@
+include <MCAD/units/metric.scad>
+use <MCAD/array/along_curve.scad>
+use <MCAD/shapes/cylinder.scad>
+use <scad-utils/transformations.scad>
+use <scad-utils/shapes.scad>
+use <MCAD/general/sweep.scad>
+use <MCAD/shapes/2Dshapes.scad>
+
 Blade_Height=16.5; // [16.5:100]
 Blade_Diameter=110.0; // [50:110]
 Number_of_Blades=12; // [6:64]
