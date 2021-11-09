@@ -1,0 +1,82 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:USB_C_Plug P?
+U 1 1 61857CA9
+P 2800 2700
+F 0 "P?" H 2907 3967 50  0000 C CNN
+F 1 "USB_C_Plug" H 2907 3876 50  0000 C CNN
+F 2 "" H 2950 2700 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 2950 2700 50  0001 C CNN
+	1    2800 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB7206CT:USB7206CT_KDX U?
+U 1 1 6185AD5F
+P 4650 1300
+F 0 "U?" H 6850 1687 60  0000 C CNN
+F 1 "USB7206CT_KDX" H 6850 1581 60  0000 C CNN
+F 2 "VQFN100_KDX_MCH" H 6850 1540 60  0001 C CNN
+F 3 "" H 4650 1300 60  0000 C CNN
+	1    4650 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L USB7206CT:USB7206CT_KDX U?
+U 2 1 61861A6C
+P 4500 4550
+F 0 "U?" H 6900 4937 60  0000 C CNN
+F 1 "USB7206CT_KDX" H 6900 4831 60  0000 C CNN
+F 2 "VQFN100_KDX_MCH" H 6700 4790 60  0001 C CNN
+F 3 "" H 4500 4550 60  0000 C CNN
+	2    4500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_C_Plug P?
+U 1 1 618659FA
+P 2750 5700
+F 0 "P?" H 2857 6967 50  0000 C CNN
+F 1 "USB_C_Plug" H 2857 6876 50  0000 C CNN
+F 2 "" H 2900 5700 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 2900 5700 50  0001 C CNN
+	1    2750 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_C_Plug P?
+U 1 1 61867B34
+P 1250 5650
+F 0 "P?" H 1357 6917 50  0000 C CNN
+F 1 "USB_C_Plug" H 1357 6826 50  0000 C CNN
+F 2 "" H 1400 5650 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1400 5650 50  0001 C CNN
+	1    1250 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_C_Plug P?
+U 1 1 61869704
+P 1250 2700
+F 0 "P?" H 1357 3967 50  0000 C CNN
+F 1 "USB_C_Plug" H 1357 3876 50  0000 C CNN
+F 2 "" H 1400 2700 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1400 2700 50  0001 C CNN
+	1    1250 2700
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

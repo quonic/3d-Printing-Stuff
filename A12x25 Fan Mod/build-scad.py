@@ -6,7 +6,7 @@ from solid.utils import *
 
 Blade_Height = 16.5
 Blade_Diameter = 110.0
-Number_of_Blades = 32
+Number_of_Blades = 6
 Blade_Twist_Angle = 30
 shaft_mount_top_height = 15.0
 
