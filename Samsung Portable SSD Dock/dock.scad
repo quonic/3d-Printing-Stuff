@@ -1,13 +1,14 @@
-Drive_Count=5;
+Drive_Count=2;
 Drive_Type="T7"; // [T5, T7]
+Filament_Type="PLA"; // [ABS, PLA]
 // Global variables
 /* [Hidden] */
-Drive_Height = Drive_Type=="T7" ? 8.08 : 10.5;
-Drive_Width = Drive_Type=="T7" ? 57 : 57.3;
+Drive_Height = (Drive_Type=="T7" ? 8 : 10.5) + (Filament_Type=="PLA" ? 0.5 : 0);
+Drive_Width = (Drive_Type=="T7" ? 57 : 57) + (Filament_Type=="PLA" ? 0.5 : 0);
 Drive_Length = Drive_Type=="T7" ? 85 : 74;
 Drive_CornerRadius = Drive_Height/2;
-UsbC_Height = 2.81;
-UsbC_Width = 8.61;
+UsbC_Height = 2.81 + (Filament_Type=="PLA" ? 0.5 : 0);
+UsbC_Width = 8.61 + (Filament_Type=="PLA" ? 0.5 : 0);
 UsbC_Length = 2.48*2;
 UsbC_CornerRadius = UsbC_Height/2;
 
@@ -33,7 +34,7 @@ module drive() {
         // USB-C connector resess
         translate([0, (Drive_Length/2)+(UsbC_Length*2)-2, 0]) {
             hull() {
-                UsbC_PortHull = 10;
+                UsbC_PortHull = 9;
                 mirror([0, 0, 0]) translate([UsbC_Width/2-UsbC_CornerRadius, 0, 0]) rotate([90,0,0]) cylinder(r=UsbC_CornerRadius+3, h=UsbC_Length+UsbC_PortHull, center=true);
                 mirror([1, 0, 0]) translate([UsbC_Width/2-UsbC_CornerRadius, 0, 0]) rotate([90,0,0]) cylinder(r=UsbC_CornerRadius+3, h=UsbC_Length+UsbC_PortHull, center=true);
             }
