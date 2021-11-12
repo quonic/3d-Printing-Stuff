@@ -73,7 +73,7 @@ if(T7s>0) {
     dock(type="T7", count=T7s);
 }
 if(T5s>0) {
-    translate([0, 0, Wall_Thickness+(8 + 0.5+Wall_Thickness)*T7s]) {
+    translate([0, 5.5, Wall_Thickness+(8 + 0.5+Wall_Thickness)*T7s]) {
         dock(type="T5", count=T5s);
     }
 }
