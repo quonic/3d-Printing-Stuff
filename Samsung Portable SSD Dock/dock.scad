@@ -34,7 +34,7 @@ module drive() {
         // USB-C connector resess
         translate([0, (Drive_Length/2)+(UsbC_Length*2)-2, 0]) {
             hull() {
-                UsbC_PortHull = 9;
+                UsbC_PortHull = 11;
                 mirror([0, 0, 0]) translate([UsbC_Width/2-UsbC_CornerRadius, 0, 0]) rotate([90,0,0]) cylinder(r=UsbC_CornerRadius+3, h=UsbC_Length+UsbC_PortHull, center=true);
                 mirror([1, 0, 0]) translate([UsbC_Width/2-UsbC_CornerRadius, 0, 0]) rotate([90,0,0]) cylinder(r=UsbC_CornerRadius+3, h=UsbC_Length+UsbC_PortHull, center=true);
             }
