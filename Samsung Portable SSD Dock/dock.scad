@@ -1,5 +1,5 @@
-T7s=2;
-T5s=2;
+T7s=1;
+T5s=1;
 
 // Global variables
 /* [Hidden] */
@@ -43,8 +43,8 @@ module dock(type="T7",count=10) {
     // uses the drive() module to generate a dock
     
 
-    Drive_Height = (type=="T7" ? 8 : 10.5) + 0.5;
-    Drive_Width = 57 + 0.5;
+    Drive_Height = (type=="T7" ? 8 : 10.5) + 1;
+    Drive_Width = 57 + 1;
     Drive_Length = (type=="T7" ? 85 : 74);
     Drive_CornerRadius = Drive_Height/2;
 
@@ -73,7 +73,7 @@ if(T7s>0) {
     dock(type="T7", count=T7s);
 }
 if(T5s>0) {
-    translate([0, 5.5, Wall_Thickness+(8 + 0.5+Wall_Thickness)*T7s]) {
+    translate([0, 5.5, Wall_Thickness+(8 + 1+Wall_Thickness)*T7s]) {
         dock(type="T5", count=T5s);
     }
 }
