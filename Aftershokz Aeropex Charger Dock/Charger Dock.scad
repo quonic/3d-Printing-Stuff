@@ -26,12 +26,22 @@ Height = 10;
 
 difference()
 {
+    // Base
     translate([ 0, 0, -2.1 ])
     {
         cube(size = [ Width, Length, Height ], center = true);
     }
 
+    // TODO: Charger holder, OPENRUN 47 deg version
+    // translate([ 0, 1, 1 ]) rotate([ 47, 0, 0 ]) translate([ 0, 5, 0 ])
+    // {
+    //     translate([ 0, 0, 6 ]) Charger();
+    //     translate([ 0, 0, 12 ]) Charger();
+    //     Charger();
+    // }
+    // Charger holder, bottom version
     Charger();
+    // Mag insert hole
     mirror([ 1, 0, 0 ])
     {
         translate([ 10, 0, -(Height / 2 + 0.7) ])
@@ -39,6 +49,7 @@ difference()
             cylinder(r = 10.05 / 2, h = 3, center = true);
         }
     }
+    // Mag insert hole
     mirror([ 0, 0, 0 ])
     {
         translate([ 10, 0, -(Height / 2 + 0.7) ])
