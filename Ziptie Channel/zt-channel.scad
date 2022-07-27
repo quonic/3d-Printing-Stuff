@@ -1,29 +1,34 @@
 // $fn = 30;
 // Assumes 1 = 1mm
 // Only 2.5, 3, and 3.6 supported. Add other dimentions to module channel as needed.
-module channel(width)
+module channel(width = 5, ztwidth = 3.6)
 {
-    if (width == 2.5)
+    // width is the distance from one whole to the other
+    // ztwidth is the width of the ziptie
+    if (ztwidth == 2.5)
     {
+        thickness = 1;
         // Ziptie 2.5mm x 1
-        channel_corner(2.5, 5, 1);
-        mirror([ 0, 1, 0 ]) channel_corner(2.5, 5, 1);
+        channel_corner(ztwidth, width, thickness);
+        mirror([ 0, 1, 0 ]) channel_corner(ztwidth, width, thickness);
     }
     else
     {
-        if (width == 3)
+        if (ztwidth == 3)
         {
+            thickness = 1;
             // Ziptie 3mm x 1
-            channel_corner(3, 5, 1);
-            mirror([ 0, 1, 0 ]) channel_corner(3, 5, 1);
+            channel_corner(ztwidth, width, thickness);
+            mirror([ 0, 1, 0 ]) channel_corner(ztwidth, width, thickness);
         }
         else
         {
-            if (width == 3.6)
+            if (ztwidth == 3.6)
             {
+                thickness = 1.2;
                 // Ziptie 3.6mm x 1.2
-                channel_corner(3.6, 5, 1.2);
-                mirror([ 0, 1, 0 ]) channel_corner(3, 5, 1.2);
+                channel_corner(ztwidth, width, thickness);
+                mirror([ 0, 1, 0 ]) channel_corner(ztwidth, width, thickness);
             }
             else
             {
