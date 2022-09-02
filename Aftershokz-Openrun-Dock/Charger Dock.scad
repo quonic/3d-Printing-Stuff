@@ -1,6 +1,6 @@
 // Aftershokz Aeropex Charger Dock
 
-Device = "OpenRun"; // ["OpenRun","OpenRun  Pro"]
+Device = "OpenRun"; // ["OpenRun","OpenRun Pro"]
 
 module Charger()
 {
