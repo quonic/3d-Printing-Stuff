@@ -2,7 +2,6 @@
 
 Device = "OpenRun"; // ["OpenRun","OpenRun  Pro"]
 
-$fn = 64;
 module Charger()
 {
     // Charger Dimentions
@@ -23,16 +22,14 @@ module Charger()
         }
     }
 }
+$fn = 64;
 Width = 35;
 Length = 24;
 Height = 10;
-p = [ [ 0, 0 ], [ Length / 2, 0 ], [ Length / 2, Height ] ];
+Triangle = [ [ 0, 0 ], [ Length / 2, 0 ], [ Length / 2, Height ] ];
 
 difference()
 {
-
-    // Base
-
     if (Device == "OpenRun")
     {
         difference()
@@ -59,7 +56,7 @@ difference()
                     cube(size = [ Width, Length, Height ], center = true);
                     translate([ 0, 0, 10 ]) rotate([ 90, 0, 90 ])
                         linear_extrude(height = Width, center = true, convexity = 10, scale = [ 1, 1 ], $fn = 100)
-                            polygon(p);
+                            polygon(Triangle);
                 }
             }
             // Charger holder
