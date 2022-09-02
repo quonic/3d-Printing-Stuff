@@ -20,7 +20,7 @@ A basic fan that fits on a [Noctua A12x25](https://noctua.at/en/nf-a12x25-pwm), 
 
 # Docks
 
-## Aftershokz Aeropex Charger Dock
+## Aftershokz Openrun Charger Dock
 
 A magnetic dock that fits Aftershokz's Aeropex Openrun and Openrun Pro headsets, using OpenSCAD's customizer. Magnets used are D10x3mm and press fit.
 
