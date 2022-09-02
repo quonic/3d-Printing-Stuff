@@ -32,14 +32,15 @@ difference()
 {
     if (Device == "OpenRun")
     {
+        // OpenRun
+        // Base
         difference()
         {
-            // Base
             translate([ 0, 0, -2.1 ])
             {
                 cube(size = [ Width, Length, Height ], center = true);
             }
-            // Charger holder, OpenRun
+            // Charger holder
             Charger();
         }
     }
