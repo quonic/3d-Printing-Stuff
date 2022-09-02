@@ -1,6 +1,6 @@
-// Aftershokz Aeropex Charger Dock
+// Aftershokz Aeropex/Openrun and Openrun Pro Charger Dock
 
-Device = "OpenRun"; // ["OpenRun","OpenRun Pro"]
+Device = "Openrun"; // ["Openrun","Openrun Pro"]
 
 module Charger()
 {
@@ -30,9 +30,9 @@ Triangle = [ [ 0, 0 ], [ Length / 2, 0 ], [ Length / 2, Height ] ];
 
 difference()
 {
-    if (Device == "OpenRun")
+    if (Device == "Openrun")
     {
-        // OpenRun
+        // Openrun
         // Base
         difference()
         {
@@ -46,7 +46,7 @@ difference()
     }
     else
     {
-        // OpenRun Pro
+        // Openrun Pro
         // Base
         difference()
         {
