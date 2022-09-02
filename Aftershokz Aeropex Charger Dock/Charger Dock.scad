@@ -1,4 +1,7 @@
 // Aftershokz Aeropex Charger Dock
+
+Device = "OpenRun"; // ["OpenRun","OpenRun  Pro"]
+
 $fn = 64;
 module Charger()
 {
@@ -23,24 +26,51 @@ module Charger()
 Width = 35;
 Length = 24;
 Height = 10;
+p = [ [ 0, 0 ], [ Length / 2, 0 ], [ Length / 2, Height ] ];
 
 difference()
 {
+
     // Base
-    translate([ 0, 0, -2.1 ])
+
+    if (Device == "OpenRun")
     {
-        cube(size = [ Width, Length, Height ], center = true);
+        difference()
+        {
+            // Base
+            translate([ 0, 0, -2.1 ])
+            {
+                cube(size = [ Width, Length, Height ], center = true);
+            }
+            // Charger holder, OpenRun
+            Charger();
+        }
+    }
+    else
+    {
+        // OpenRun Pro
+        // Base
+        difference()
+        {
+            hull()
+            {
+                translate([ 0, 0, -2.1 ])
+                {
+                    cube(size = [ Width, Length, Height ], center = true);
+                    translate([ 0, 0, 10 ]) rotate([ 90, 0, 90 ])
+                        linear_extrude(height = Width, center = true, convexity = 10, scale = [ 1, 1 ], $fn = 100)
+                            polygon(p);
+                }
+            }
+            // Charger holder
+            translate([ 0, 1, 1 ]) rotate([ 32, 0, 0 ]) translate([ 0, 3.5, 5.6 ])
+            {
+                translate([ 0, -10, 0 ]) Charger();
+                Charger();
+            }
+        }
     }
 
-    // TODO: Charger holder, OPENRUN 47 deg version
-    // translate([ 0, 1, 1 ]) rotate([ 47, 0, 0 ]) translate([ 0, 5, 0 ])
-    // {
-    //     translate([ 0, 0, 6 ]) Charger();
-    //     translate([ 0, 0, 12 ]) Charger();
-    //     Charger();
-    // }
-    // Charger holder, bottom version
-    Charger();
     // Mag insert hole
     mirror([ 1, 0, 0 ])
     {
