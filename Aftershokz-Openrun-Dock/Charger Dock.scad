@@ -71,7 +71,7 @@ difference()
         }
     }
 
-    // Mag insert hole
+    // Magnet D10x3mm insert hole
     mirror([ 1, 0, 0 ])
     {
         translate([ 10, 0, -(Height / 2 + 0.7) ])
@@ -79,7 +79,7 @@ difference()
             cylinder(r = 10.05 / 2, h = 3, center = true);
         }
     }
-    // Mag insert hole
+    // Mag D10x3mm insert hole
     mirror([ 0, 0, 0 ])
     {
         translate([ 10, 0, -(Height / 2 + 0.7) ])
