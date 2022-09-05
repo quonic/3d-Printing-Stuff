@@ -35,7 +35,7 @@ module Brick(width = 2, length = 4)
     }
 
     // inner brick braces for each 2x2
-    for (l = [1:length - 1])
+    for (l = [1:length - 1]) // sub tract 1 from dimention so we don't add unneeded braces
     {
         if (l % 2 == 0)
         {
