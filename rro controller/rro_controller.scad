@@ -7,7 +7,7 @@ case_wall = 4;
 
 height = 40;
 width = boarder + (20 * slider_count) + (10) + boarder;
-depth = boarder + 120 + boarder;
+depth = boarder + 120+30 + boarder;
 size = [ depth, width, height ];
 
 
@@ -44,8 +44,9 @@ module case (){
         cube(size);
         translate([ case_wall, case_wall, case_wall-boarder ])
         cube([ depth - (case_wall*2), width - (case_wall*2), height - (case_wall*2)+boarder ]);
-        translate([ 0, case_wall*4, 8 ])
+        translate([ 15, case_wall*4, 8 ])
         slider_mounting_holes (count=slider_count);
+        translate([ 15, 0, 0 ])
         buttons(count=button_count);
     }
 }
